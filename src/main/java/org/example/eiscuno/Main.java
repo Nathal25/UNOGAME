@@ -7,6 +7,7 @@ import org.example.eiscuno.view.GameUnoStage;
 import java.io.IOException;
 
 /**
+ * nog branch
  * The main class of the EISC Uno application.
  */
 public class Main extends Application {
