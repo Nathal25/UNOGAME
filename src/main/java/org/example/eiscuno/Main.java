@@ -27,7 +27,7 @@ public class Main extends Application {
      * @throws IOException if an error occurs while loading the stage
      */
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage primaryStage) throws IOException  {
         GameUnoStage.getInstance();
     }
 }
