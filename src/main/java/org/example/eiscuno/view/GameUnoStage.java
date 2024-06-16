@@ -30,7 +30,7 @@ public class GameUnoStage extends Stage {
         }
         Scene scene = new Scene(root);
         // Configuring the stage
-        setTitle("EISC Uno"); // Sets the title of the stage
+        setTitle("EISC Uno"); //  Sets the title of the stage
         setScene(scene); // Sets the scene for the stage
         getIcons().add(new Image(String.valueOf(getClass().getResource("/org/example/eiscuno/favicon.png"))));
         setResizable(false); // Disallows resizing of the stage

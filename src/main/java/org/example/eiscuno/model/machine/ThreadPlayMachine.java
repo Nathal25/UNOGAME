@@ -10,12 +10,14 @@ public class ThreadPlayMachine extends Thread {
     private Player machinePlayer;
     private ImageView tableImageView;
     private volatile boolean hasPlayerPlayed;
+    private volatile boolean running = true;
 
     public ThreadPlayMachine(Table table, Player machinePlayer, ImageView tableImageView) {
         this.table = table;
         this.machinePlayer = machinePlayer;
         this.tableImageView = tableImageView;
         this.hasPlayerPlayed = false;
+
     }
 
     public void run() {
