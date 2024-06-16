@@ -70,6 +70,7 @@ public class GameUnoController {
     /**
      * Prints the human player's cards on the grid pane.
      */
+    //Hacer que verifique las reglas
     private void printCardsHumanPlayer() {
         this.gridPaneCardsPlayer.getChildren().clear();
         Card[] currentVisibleCardsHumanPlayer = this.gameUno.getCurrentVisibleCardsHumanPlayer(this.posInitCardToShow);
