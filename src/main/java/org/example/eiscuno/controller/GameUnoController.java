@@ -12,6 +12,7 @@ import org.example.eiscuno.model.machine.ThreadPlayMachine;
 import org.example.eiscuno.model.machine.ThreadSingUNOMachine;
 import org.example.eiscuno.model.player.Player;
 import org.example.eiscuno.model.table.Table;
+import org.example.eiscuno.view.GameUnoStage;
 
 /**
  * Controller class for the Uno game.
@@ -129,6 +130,10 @@ public class GameUnoController {
             this.posInitCardToShow++;
             printCardsHumanPlayer();
         }
+    }
+    @FXML
+    void onHandleButtonCloseGame(ActionEvent event) {
+        GameUnoStage.deleteInstance();
     }
 
     /**
