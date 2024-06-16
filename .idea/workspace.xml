@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="Creacion de rama">
+    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="Se añade favicon">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/view/GameUnoStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/view/GameUnoStage.java" afterDir="false" />
     </list>
@@ -71,6 +71,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\CAMILO\IdeaProjects\UNOGAME\src\main\resources\org\example\eiscuno" />
+      <recent name="C:\Users\CAMILO\IdeaProjects\UNOGAME\src\main\resources\org\example\eiscuno\images" />
       <recent name="C:\Users\fsvc1\Coding\eisc-uno\src\main\resources\org\example\eiscuno" />
       <recent name="C:\Users\fsvc1\Coding\eisc-uno\src\main\resources\org\example\eiscuno\images" />
       <recent name="C:\Users\fsvc1\Coding\eisc-uno\src" />
@@ -136,6 +138,23 @@
       <workItem from="1718255559107" duration="40000" />
       <workItem from="1718303003074" duration="638000" />
     </task>
+    <task id="LOCAL-00001" summary="Se añade favicon">
+      <option name="closed" value="true" />
+      <created>1718498607759</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718498607759</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Se añade favicon">
+      <option name="closed" value="true" />
+      <created>1718499063551</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718499063551</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +162,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creacion de rama" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creacion de rama" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/nog' into sysr&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="Se añade favicon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se añade favicon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
