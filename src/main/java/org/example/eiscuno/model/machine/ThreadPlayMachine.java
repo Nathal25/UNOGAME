@@ -32,7 +32,7 @@ public class ThreadPlayMachine extends Thread {
             }
         }
     }
-
+    //Verificar que la carta a poner sigue las reglas del juego
     private void putCardOnTheTable(){
         int index = (int) (Math.random() * machinePlayer.getCardsPlayer().size());
         Card card = machinePlayer.getCard(index);
