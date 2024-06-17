@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="Se implementan las imágenes a los botones de salir, baraja y botón uno." />
+    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="Creacion de rama">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/view/GameUnoStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/view/GameUnoStage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,9 +18,9 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="Enum" />
+        <option value="CSS File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -55,24 +58,19 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "sysr",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/CAMILO/IdeaProjects/UNOGAME/src/main/resources/org/example/eiscuno/images",
+    "last_opened_file_path": "C:/Users/natis/IdeaProjects/eisc-uno-master",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\CAMILO\IdeaProjects\UNOGAME\src\main\resources\org\example\eiscuno\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\CAMILO\IdeaProjects\UNOGAME\src\main\resources\org\example\eiscuno\images" />
-      <recent name="C:\Users\CAMILO\IdeaProjects\UNOGAME\src\main\resources\org\example\eiscuno" />
       <recent name="C:\Users\fsvc1\Coding\eisc-uno\src\main\resources\org\example\eiscuno" />
       <recent name="C:\Users\fsvc1\Coding\eisc-uno\src\main\resources\org\example\eiscuno\images" />
       <recent name="C:\Users\fsvc1\Coding\eisc-uno\src" />
@@ -138,111 +136,6 @@
       <workItem from="1718255559107" duration="40000" />
       <workItem from="1718303003074" duration="638000" />
     </task>
-    <task id="LOCAL-00001" summary="Se añade favicon">
-      <option name="closed" value="true" />
-      <created>1718498607759</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1718498607759</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Se añade favicon">
-      <option name="closed" value="true" />
-      <created>1718499063551</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1718499063551</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Se añade favicon">
-      <option name="closed" value="true" />
-      <created>1718501725840</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1718501725840</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Se implementan las imágenes a los botones de salir, baraja y botón uno.">
-      <option name="closed" value="true" />
-      <created>1718602545433</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1718602545433</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Se implementan las imágenes a los botones de salir, baraja y botón uno.">
-      <option name="closed" value="true" />
-      <created>1718602579518</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1718602579518</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Se implementan las imágenes a los botones de salir, baraja y botón uno.">
-      <option name="closed" value="true" />
-      <created>1718602608585</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1718602608585</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Se implementan las imágenes a los botones de salir, baraja y botón uno.">
-      <option name="closed" value="true" />
-      <created>1718602637794</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1718602637794</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Se implementan las imágenes a los botones de salir, baraja y botón uno.">
-      <option name="closed" value="true" />
-      <created>1718602670523</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1718602670523</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Se implementan las imágenes a los botones de salir, baraja y botón uno.">
-      <option name="closed" value="true" />
-      <created>1718602681201</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1718602681201</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Se implementan las imágenes a los botones de salir, baraja y botón uno.">
-      <option name="closed" value="true" />
-      <created>1718602704165</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1718602704165</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Se implementan las imágenes a los botones de salir, baraja y botón uno.">
-      <option name="closed" value="true" />
-      <created>1718602747864</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1718602747864</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Se implementan las imágenes a los botones de salir, baraja y botón uno.">
-      <option name="closed" value="true" />
-      <created>1718602775972</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1718602775972</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Se implementan las imágenes a los botones de salir, baraja y botón uno.">
-      <option name="closed" value="true" />
-      <created>1718602868375</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1718602868375</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,17 +143,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creacion de rama" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/nog' into sysr&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <MESSAGE value="Se añade favicon" />
-    <MESSAGE value="Se implementan las imágenes a los botones de salir, baraja y botón uno." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se implementan las imágenes a los botones de salir, baraja y botón uno." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creacion de rama" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java</url>
-          <line>171</line>
+          <line>64</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
