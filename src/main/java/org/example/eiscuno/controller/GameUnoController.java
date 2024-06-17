@@ -80,11 +80,12 @@ public class GameUnoController {
         initVariables();
         this.gameUno.startGame();
         printCardsHumanPlayer();
-        printCardMachinePlayer();
         addImageButtonUno();
         addImageButtonExit();
         addImageButtonDecks();
         setBackgroundImagePane(borderPane, "/org/example/eiscuno/images/background_uno.png");
+
+
 
         threadSingUNOMachine = new ThreadSingUNOMachine(this.humanPlayer.getCardsPlayer());
         Thread t = new Thread(threadSingUNOMachine, "ThreadSingUNO");
@@ -92,8 +93,9 @@ public class GameUnoController {
 
         threadPlayMachine = new ThreadPlayMachine(this.table, this.machinePlayer, this.tableImageView);
         threadPlayMachine.start();
-
+        printCardMachinePlayer();
     }
+
 
     //Imagen ButtonUno
     public void addImageButtonUno() {
@@ -196,7 +198,7 @@ public class GameUnoController {
         System.out.println("Tamaño "+currentVisibleCardsMachinePlayer.length);
         for (int i = 0; i < currentVisibleCardsMachinePlayer.length; i++) {
             Card card = currentVisibleCardsMachinePlayer[i];
-            machinePlayer.removeCard(findPosCardsMachinePlayer(card));
+//            machinePlayer.removeCard(findPosCardsMachinePlayer(card));
             ImageView newCardImageView=new ImageView(new Image(getClass().getResourceAsStream("/org/example/eiscuno/cards-uno/card_uno.png")));
             newCardImageView.setFitHeight(90);
             newCardImageView.setFitWidth(70);
@@ -204,6 +206,14 @@ public class GameUnoController {
         }
     }
 
+    private Integer findPosCardsMachinePlayer(Card card){
+        for (int i=0;i<this.machinePlayer.getCardsPlayer().size();i++){
+            if (this.machinePlayer.getCardsPlayer().get(i).equals(card)) {
+                return i;
+            }
+        }
+        return -1;
+    }
     /**
      * Finds the position of a specific card in the human player's hand.
      *
@@ -220,14 +230,8 @@ public class GameUnoController {
         return -1;
     }
 
-    private Integer findPosCardsMachinePlayer(Card card){
-        for (int i=0;i<this.machinePlayer.getCardsPlayer().size();i++){
-            if (this.machinePlayer.getCardsPlayer().get(i).equals(card)) {
-                return i;
-            }
-        }
-        return -1;
-    }
+
+
 
     /**
      * Handles the "Back" button action to show the previous set of cards.
