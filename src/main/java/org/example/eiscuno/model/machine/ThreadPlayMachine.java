@@ -10,7 +10,6 @@ public class ThreadPlayMachine extends Thread {
     private Player machinePlayer;
     private ImageView tableImageView;
     private volatile boolean hasPlayerPlayed;
-    private volatile boolean running = true;
 
     public ThreadPlayMachine(Table table, Player machinePlayer, ImageView tableImageView) {
         this.table = table;
@@ -40,7 +39,7 @@ public class ThreadPlayMachine extends Thread {
         Card card = machinePlayer.getCard(index);
         table.addCardOnTheTable(card);
         tableImageView.setImage(card.getImage());
-
+        System.out.println("Se añadió "+tableImageView.getImage());
     }
 
     public void setHasPlayerPlayed(boolean hasPlayerPlayed) {
