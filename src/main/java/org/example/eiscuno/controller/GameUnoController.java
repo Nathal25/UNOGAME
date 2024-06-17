@@ -80,12 +80,11 @@ public class GameUnoController {
         initVariables();
         this.gameUno.startGame();
         printCardsHumanPlayer();
+        printCardMachinePlayer();
         addImageButtonUno();
         addImageButtonExit();
         addImageButtonDecks();
         setBackgroundImagePane(borderPane, "/org/example/eiscuno/images/background_uno.png");
-
-
 
         threadSingUNOMachine = new ThreadSingUNOMachine(this.humanPlayer.getCardsPlayer());
         Thread t = new Thread(threadSingUNOMachine, "ThreadSingUNO");
@@ -95,7 +94,6 @@ public class GameUnoController {
         threadPlayMachine.start();
 
     }
-
 
     //Imagen ButtonUno
     public void addImageButtonUno() {
@@ -141,9 +139,6 @@ public class GameUnoController {
 
     }
 
-
-
-
     private void setBackgroundImagePane(BorderPane borderPane, String imagePath) {
         Image image = new Image(getClass().getResourceAsStream(imagePath));
         BackgroundImage backgroundImage = new BackgroundImage(
@@ -156,10 +151,6 @@ public class GameUnoController {
         Background background = new Background(backgroundImage);
         borderPane.setBackground(background);
     }
-
-
-
-
 
 
     /**
@@ -198,6 +189,20 @@ public class GameUnoController {
             this.gridPaneCardsPlayer.add(cardImageView, i, 0);
         }
     }
+    private void printCardMachinePlayer(){
+        this.gridPaneCardsMachine.getChildren().clear();
+        System.out.println("MACHINE_PLAYER: " + this.machinePlayer.getCardsPlayer());
+        Card[] currentVisibleCardsMachinePlayer = this.gameUno.getCurrentVisibleCardsMachinePlayer(this.posInitCardToShow);
+        System.out.println("Tamaño "+currentVisibleCardsMachinePlayer.length);
+        for (int i = 0; i < currentVisibleCardsMachinePlayer.length; i++) {
+            Card card = currentVisibleCardsMachinePlayer[i];
+            machinePlayer.removeCard(findPosCardsMachinePlayer(card));
+            ImageView newCardImageView=new ImageView(new Image(getClass().getResourceAsStream("/org/example/eiscuno/cards-uno/card_uno.png")));
+            newCardImageView.setFitHeight(90);
+            newCardImageView.setFitWidth(70);
+            this.gridPaneCardsMachine.add(newCardImageView,i,0);
+        }
+    }
 
     /**
      * Finds the position of a specific card in the human player's hand.
@@ -214,8 +219,14 @@ public class GameUnoController {
         return -1;
     }
 
-
-
+    private Integer findPosCardsMachinePlayer(Card card){
+        for (int i=0;i<this.machinePlayer.getCardsPlayer().size();i++){
+            if (this.machinePlayer.getCardsPlayer().get(i).equals(card)) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
     /**
      * Handles the "Back" button action to show the previous set of cards.

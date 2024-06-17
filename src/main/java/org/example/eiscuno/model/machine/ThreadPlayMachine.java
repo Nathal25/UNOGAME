@@ -46,4 +46,5 @@ public class ThreadPlayMachine extends Thread {
     public void setHasPlayerPlayed(boolean hasPlayerPlayed) {
         this.hasPlayerPlayed = hasPlayerPlayed;
     }
+
 }
