@@ -46,7 +46,7 @@
                   <RowConstraints />
                </rowConstraints>
             </GridPane>
-            <Button fx:id="ButtonSalir" mnemonicParsing="false" onAction="#onHandleButtonCloseGame" prefHeight="24.0" prefWidth="42.0" text="Salir" />
+            <Button fx:id="ButtonSalir" mnemonicParsing="false" onAction="#onHandleButtonCloseGame" prefHeight="25.0" prefWidth="40.0" text="Salir" />
          </children>
       </HBox>
    </top>
