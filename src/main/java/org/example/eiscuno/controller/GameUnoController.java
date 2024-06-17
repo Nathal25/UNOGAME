@@ -94,6 +94,7 @@ public class GameUnoController {
         threadPlayMachine = new ThreadPlayMachine(this.table, this.machinePlayer, this.tableImageView);
         threadPlayMachine.start();
         printCardMachinePlayer();
+
     }
 
 
@@ -186,19 +187,21 @@ public class GameUnoController {
                 humanPlayer.removeCard(findPosCardsHumanPlayer(card));
                 threadPlayMachine.setHasPlayerPlayed(true);
                 printCardsHumanPlayer();
-            });
+//              printCardMachinePlayer();
 
+            });
+            printCardMachinePlayer();
             this.gridPaneCardsPlayer.add(cardImageView, i, 0);
         }
     }
     private void printCardMachinePlayer(){
         this.gridPaneCardsMachine.getChildren().clear();
+
         System.out.println("MACHINE_PLAYER: " + this.machinePlayer.getCardsPlayer());
         Card[] currentVisibleCardsMachinePlayer = this.gameUno.getCurrentVisibleCardsMachinePlayer(this.posInitCardToShow);
         System.out.println("Tamaño "+currentVisibleCardsMachinePlayer.length);
         for (int i = 0; i < currentVisibleCardsMachinePlayer.length; i++) {
             Card card = currentVisibleCardsMachinePlayer[i];
-//            machinePlayer.removeCard(findPosCardsMachinePlayer(card));
             ImageView newCardImageView=new ImageView(new Image(getClass().getResourceAsStream("/org/example/eiscuno/cards-uno/card_uno.png")));
             newCardImageView.setFitHeight(90);
             newCardImageView.setFitWidth(70);
@@ -206,14 +209,6 @@ public class GameUnoController {
         }
     }
 
-    private Integer findPosCardsMachinePlayer(Card card){
-        for (int i=0;i<this.machinePlayer.getCardsPlayer().size();i++){
-            if (this.machinePlayer.getCardsPlayer().get(i).equals(card)) {
-                return i;
-            }
-        }
-        return -1;
-    }
     /**
      * Finds the position of a specific card in the human player's hand.
      *
