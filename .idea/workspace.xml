@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="Permite que el usuario coma cartas de la baraja">
+    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="Creacion de rama">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/card/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/card/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/machine/ThreadPlayMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/machine/ThreadPlayMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/eiscuno/game-uno-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/eiscuno/game-uno-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/eiscuno/images/background_uno.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +58,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "nog",
+    "git-widget-placeholder": "sysr",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/natis/IdeaProjects/eisc-uno-master",
+    "last_opened_file_path": "C:/Users/CAMILO/IdeaProjects/UNOGAME/src/main/resources/org/example/eiscuno/images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -71,6 +72,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\CAMILO\IdeaProjects\UNOGAME\src\main\resources\org\example\eiscuno\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\fsvc1\Coding\eisc-uno\src\main\resources\org\example\eiscuno" />
       <recent name="C:\Users\fsvc1\Coding\eisc-uno\src\main\resources\org\example\eiscuno\images" />
@@ -146,31 +150,7 @@
       <option name="project" value="LOCAL" />
       <updated>1718641213797</updated>
     </task>
-    <task id="LOCAL-00002" summary="Se implementan las cartas de la maquina en la parte superior">
-      <option name="closed" value="true" />
-      <created>1718641626499</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1718641626499</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Cambios respecto a la actualizacion de las cartas de la maquina, aun hay fallos">
-      <option name="closed" value="true" />
-      <created>1718653781979</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1718653781979</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Permite que el usuario coma cartas de la baraja">
-      <option name="closed" value="true" />
-      <created>1718686762312</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1718686762313</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,8 +159,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creacion de rama" />
     <MESSAGE value="Se implementan las cartas de la maquina en la parte superior" />
-    <MESSAGE value="Cambios respecto a la actualizacion de las cartas de la maquina, aun hay fallos" />
-    <MESSAGE value="Permite que el usuario coma cartas de la baraja" />
-    <option name="LAST_COMMIT_MESSAGE" value="Permite que el usuario coma cartas de la baraja" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se implementan las cartas de la maquina en la parte superior" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
