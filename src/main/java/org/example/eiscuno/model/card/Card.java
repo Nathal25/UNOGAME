@@ -65,4 +65,8 @@ public class Card {
     public String getColor() {
         return color;
     }
+
+    public String getUrl() {
+        return url;
+    }
 }

@@ -24,7 +24,7 @@ import org.example.eiscuno.view.GameUnoStage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
+import java.util.Stack;
 
 
 /**
@@ -42,14 +42,10 @@ public class GameUnoController {
     private ImageView tableImageView;
 
     @FXML
-    private Button ButtonSalir;
+    private Button ButtonExit;
 
     @FXML
     private BorderPane borderPane;
-
-
-    @FXML
-    private Button ButtonSiguiente;
 
     @FXML
     private GameUno gameUno;
@@ -57,7 +53,7 @@ public class GameUnoController {
     private Button ButtonUno;
 
     @FXML
-    private Button ButtonBaraja;
+    private Button ButtonDeck;
 
     private Player humanPlayer;
     private Player machinePlayer;
@@ -70,7 +66,7 @@ public class GameUnoController {
 
     private ThreadSingUNOMachine threadSingUNOMachine;
     private ThreadPlayMachine threadPlayMachine;
-
+    private Stack<Card> deckOfCards = new Stack<>();
     /**
      * Initializes the controller.
      */
@@ -94,10 +90,37 @@ public class GameUnoController {
         threadPlayMachine = new ThreadPlayMachine(this.table, this.machinePlayer, this.tableImageView);
         threadPlayMachine.start();
         printCardMachinePlayer();
-
+        reStoreCards();
+        setTwoMoreCards();
     }
 
+    /**
+     * Stores the cards that are put on the table
+     */
+    public void reStoreCards() {
+        int size = table.getCardsTable().size();
+        if (size != 0) {
+            Card currentCard = table.getCurrentCardOnTheTable();
+            if (currentCard != null) {
+                deckOfCards.add(currentCard);
+                System.out.println("Carta en el tablero " + currentCard);
+                newCards(deckOfCards);
+            }
+        }
+//        for (int i = 0; i < deckOfCards.size(); i++) {
+//            System.out.println("Las cartas son "+deckOfCards.get(i));
+//        }
+    }
 
+    /**
+     *
+     * @param deckOfCards
+     */
+    public void newCards(Stack<Card> deckOfCards){
+        if (deck.isEmpty()){
+            deck.setDeckOfCards(deckOfCards);
+        }
+    }
     //Imagen ButtonUno
     public void addImageButtonUno() {
         URL urlImageUno = getClass().getResource("/org/example/eiscuno/images/button_uno.png");
@@ -118,12 +141,12 @@ public class GameUnoController {
 
         Image imagenNuevo = new Image(urlImageExit.toString());
         ImageView imageView = new ImageView(imagenNuevo);
-        imageView.setFitWidth(45);
-        imageView.setFitHeight(45);
-        ButtonSalir.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-        ButtonSalir.setGraphic(imageView);
-        ButtonSalir.setMinSize(40, 40);
-        ButtonSalir.setMaxSize(40, 40);
+        imageView.setFitWidth(55);
+        imageView.setFitHeight(55);
+        ButtonExit.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
+        ButtonExit.setGraphic(imageView);
+        ButtonExit.setMinSize(50, 50);
+        ButtonExit.setMaxSize(50, 50);
 
     }
 
@@ -135,10 +158,10 @@ public class GameUnoController {
         ImageView imageView = new ImageView(imagenNuevo);
         imageView.setFitWidth(110);
         imageView.setFitHeight(165);
-        ButtonBaraja.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-        ButtonBaraja.setGraphic(imageView);
-        ButtonBaraja.setMinSize(80, 80);
-        ButtonBaraja.setMaxSize(80, 80);
+        ButtonDeck.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
+        ButtonDeck.setGraphic(imageView);
+        ButtonDeck.setMinSize(80, 80);
+        ButtonDeck.setMaxSize(80, 80);
 
     }
 
@@ -171,7 +194,6 @@ public class GameUnoController {
     /**
      * Prints the human player's cards on the grid pane.
      */
-    //Hacer que verifique las reglas
     private void printCardsHumanPlayer() {
         this.gridPaneCardsPlayer.getChildren().clear();
         Card[] currentVisibleCardsHumanPlayer = this.gameUno.getCurrentVisibleCardsHumanPlayer(this.posInitCardToShow);
@@ -187,8 +209,7 @@ public class GameUnoController {
                 humanPlayer.removeCard(findPosCardsHumanPlayer(card));
                 threadPlayMachine.setHasPlayerPlayed(true);
                 printCardsHumanPlayer();
-//              printCardMachinePlayer();
-
+                reStoreCards();
             });
             printCardMachinePlayer();
             this.gridPaneCardsPlayer.add(cardImageView, i, 0);
@@ -200,13 +221,15 @@ public class GameUnoController {
         System.out.println("MACHINE_PLAYER: " + this.machinePlayer.getCardsPlayer());
         Card[] currentVisibleCardsMachinePlayer = this.gameUno.getCurrentVisibleCardsMachinePlayer(this.posInitCardToShow);
         System.out.println("Tamaño "+currentVisibleCardsMachinePlayer.length);
-        for (int i = 0; i < currentVisibleCardsMachinePlayer.length; i++) {
+        int size=currentVisibleCardsMachinePlayer.length;
+        for (int i = 0; i < size; i++) {
             Card card = currentVisibleCardsMachinePlayer[i];
             ImageView newCardImageView=new ImageView(new Image(getClass().getResourceAsStream("/org/example/eiscuno/cards-uno/card_uno.png")));
             newCardImageView.setFitHeight(90);
             newCardImageView.setFitWidth(70);
             this.gridPaneCardsMachine.add(newCardImageView,i,0);
         }
+        reStoreCards();
     }
 
     /**
@@ -224,8 +247,6 @@ public class GameUnoController {
         }
         return -1;
     }
-
-
 
 
     /**
@@ -259,6 +280,14 @@ public class GameUnoController {
 
     }
 
+    public void setTwoMoreCards(){
+        if(!this.table.getCardsTable().isEmpty()){
+            Card card=this.table.getCurrentCardOnTheTable();
+            card.getValue();
+            System.out.println("La caracteristica de la carta es: "+card.getValue());
+        }
+    }
+
     /**
      * Handles the action of taking a card.
      *
@@ -267,6 +296,19 @@ public class GameUnoController {
     @FXML
     void onHandleTakeCard(ActionEvent event) {
         // Implement logic to take a card here
+//        Card cards=table.getCurrentCardOnTheTable();
+//        Card card=deck.takeCard();
+//        this.humanPlayer.addCard(card);
+//        printCardsHumanPlayer();
+        if(!threadPlayMachine.isHasPlayerPlayed()){
+            this.humanPlayer.addCard(deck.takeCard());
+            System.out.println("Se añadio la carta "+deck.takeCard());
+            System.out.println("Al usuario "+humanPlayer.getCardsPlayer());
+            printCardsHumanPlayer();
+        }else {
+            this.machinePlayer.addCard(deck.takeCard());
+            printCardMachinePlayer();
+        }
         System.out.println("BotonBaraja");
     }
 

@@ -1,0 +1,154 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec\" name=\"Changes\" comment=\"Creacion de rama\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/machine/ThreadPlayMachine.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/machine/ThreadPlayMachine.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaFXApplication\" />\r\n        <option value=\"Enum\" />\r\n        <option value=\"CSS File\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;fabiansvc&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/fabiansvc/eisc-uno.git&quot;,\r\n    &quot;accountId&quot;: &quot;0c82e6b4-a45c-4190-a110-02ef4a3ff1b6&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 4\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2h51MgXC3VsYGUopaGajj22IER5\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"Application.HelloApplication.executor\": \"Run\",\r\n    \"Application.Main.executor\": \"Run\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"git-widget-placeholder\": \"nog\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/natis/IdeaProjects/eisc-uno-master\",\r\n    \"list.type.of.created.stylesheet\": \"CSS\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"settings.editor.selected.configurable\": \"preferences.lookFeel\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\fsvc1\\Coding\\eisc-uno\\src\\main\\resources\\org\\example\\eiscuno\" />\r\n      <recent name=\"C:\\Users\\fsvc1\\Coding\\eisc-uno\\src\\main\\resources\\org\\example\\eiscuno\\images\" />\r\n      <recent name=\"C:\\Users\\fsvc1\\Coding\\eisc-uno\\src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.eiscuno.Main\" />\r\n      <module name=\"eisc-uno\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.example.eiscuno.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240\" />\r\n        <option value=\"bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec\" name=\"Changes\" comment=\"\" />\r\n      <created>1716869079895</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1716869079895</updated>\r\n      <workItem from=\"1716869081101\" duration=\"1989000\" />\r\n      <workItem from=\"1716937216117\" duration=\"1202000\" />\r\n      <workItem from=\"1716949345992\" duration=\"5490000\" />\r\n      <workItem from=\"1717004194707\" duration=\"3656000\" />\r\n      <workItem from=\"1717077374234\" duration=\"23000\" />\r\n      <workItem from=\"1717100685009\" duration=\"1547000\" />\r\n      <workItem from=\"1717179969295\" duration=\"1262000\" />\r\n      <workItem from=\"1717188401940\" duration=\"5723000\" />\r\n      <workItem from=\"1717248020885\" duration=\"2071000\" />\r\n      <workItem from=\"1717294616252\" duration=\"3767000\" />\r\n      <workItem from=\"1717380082805\" duration=\"84000\" />\r\n      <workItem from=\"1717445468019\" duration=\"129000\" />\r\n      <workItem from=\"1717445697650\" duration=\"964000\" />\r\n      <workItem from=\"1717456780718\" duration=\"9929000\" />\r\n      <workItem from=\"1717624873426\" duration=\"617000\" />\r\n      <workItem from=\"1717648324316\" duration=\"1349000\" />\r\n      <workItem from=\"1717701834429\" duration=\"18000\" />\r\n      <workItem from=\"1717704199858\" duration=\"6785000\" />\r\n      <workItem from=\"1717852871006\" duration=\"31000\" />\r\n      <workItem from=\"1717853787588\" duration=\"7091000\" />\r\n      <workItem from=\"1718255236655\" duration=\"304000\" />\r\n      <workItem from=\"1718255559107\" duration=\"40000\" />\r\n      <workItem from=\"1718303003074\" duration=\"638000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Se implementan las cartas de la maquina en la parte superior\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1718641213797</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1718641213797</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Creacion de rama\" />\r\n    <MESSAGE value=\"Se implementan las cartas de la maquina en la parte superior\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Se implementan las cartas de la maquina en la parte superior\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java</url>\r\n          <line>64</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8c8a3edb26efe998efd5bb160849bc21aa68ae09)
++++ b/.idea/workspace.xml	(date 1718691637175)
+@@ -4,9 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="Creacion de rama">
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/machine/ThreadPlayMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/machine/ThreadPlayMachine.java" afterDir="false" />
++    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="Se implementan las imágenes a los botones de salir, baraja (deck) y botón uno.">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/eiscuno/game-uno-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/eiscuno/game-uno-view.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/eiscuno/images/background_uno.png" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -48,28 +49,31 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_ADD_EXTERNAL_FILES": "true",
+-    "Application.HelloApplication.executor": "Run",
+-    "Application.Main.executor": "Run",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "git-widget-placeholder": "nog",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/Users/natis/IdeaProjects/eisc-uno-master",
+-    "list.type.of.created.stylesheet": "CSS",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "settings.editor.selected.configurable": "preferences.lookFeel",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;sysr&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/CAMILO/IdeaProjects/UNOGAME/src/main/resources/org/example/eiscuno/images&quot;,
++    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\CAMILO\IdeaProjects\UNOGAME\src\main\resources\org\example\eiscuno\images" />
++    </key>
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\fsvc1\Coding\eisc-uno\src\main\resources\org\example\eiscuno" />
+       <recent name="C:\Users\fsvc1\Coding\eisc-uno\src\main\resources\org\example\eiscuno\images" />
+@@ -92,7 +96,6 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.Main" />
+         <item itemvalue="Application.Main" />
+       </list>
+     </recent_temporary>
+@@ -100,8 +103,7 @@
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
++        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -136,16 +138,8 @@
+       <workItem from="1718255236655" duration="304000" />
+       <workItem from="1718255559107" duration="40000" />
+       <workItem from="1718303003074" duration="638000" />
++      <workItem from="1718691314409" duration="323000" />
+     </task>
+-    <task id="LOCAL-00001" summary="Se implementan las cartas de la maquina en la parte superior">
+-      <option name="closed" value="true" />
+-      <created>1718641213797</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1718641213797</updated>
+-    </task>
+-    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -153,8 +147,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Creacion de rama" />
+-    <MESSAGE value="Se implementan las cartas de la maquina en la parte superior" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Se implementan las cartas de la maquina en la parte superior" />
++    <option name="LAST_COMMIT_MESSAGE" value="Creacion de rama" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+Index: src/main/resources/org/example/eiscuno/game-uno-view.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.image.ImageView?>\r\n<?import javafx.scene.layout.BorderPane?>\r\n<?import javafx.scene.layout.ColumnConstraints?>\r\n<?import javafx.scene.layout.GridPane?>\r\n<?import javafx.scene.layout.HBox?>\r\n<?import javafx.scene.layout.Pane?>\r\n<?import javafx.scene.layout.RowConstraints?>\r\n<?import javafx.scene.text.Font?>\r\n\r\n<BorderPane fx:id=\"borderPane\" maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"400.0\" prefWidth=\"600.0\" styleClass=\"background-pane\" xmlns=\"http://javafx.com/javafx/21\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"org.example.eiscuno.controller.GameUnoController\">\r\n    <left>\r\n        <Pane prefHeight=\"200.0\" prefWidth=\"200.0\" BorderPane.alignment=\"CENTER\">\r\n            <children>\r\n                <Button fx:id=\"ButtonBaraja\" layoutX=\"50.0\" layoutY=\"30.0\" mnemonicParsing=\"false\" onAction=\"#onHandleTakeCard\" prefHeight=\"155.0\" prefWidth=\"100.0\" text=\"Baraja\" />\r\n            </children>\r\n        </Pane>\r\n    </left>\r\n    <right>\r\n        <Pane prefHeight=\"200.0\" prefWidth=\"200.0\" BorderPane.alignment=\"CENTER\">\r\n            <children>\r\n                <Button fx:id=\"ButtonUno\" layoutX=\"59.0\" layoutY=\"59.0\" mnemonicParsing=\"false\" onAction=\"#onHandleUno\" prefHeight=\"50.0\" prefWidth=\"100.0\" text=\"UNO\" />\r\n            </children>\r\n        </Pane>\r\n    </right>\r\n    <center>\r\n        <Pane prefHeight=\"200.0\" prefWidth=\"200.0\" BorderPane.alignment=\"CENTER\">\r\n            <children>\r\n                <ImageView fx:id=\"tableImageView\" fitHeight=\"149.0\" fitWidth=\"100.0\" layoutX=\"50.0\" layoutY=\"30.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n            </children>\r\n        </Pane>\r\n    </center>\r\n    <top>\r\n        <HBox alignment=\"CENTER\" prefHeight=\"100.0\" prefWidth=\"200.0\" spacing=\"10.0\" BorderPane.alignment=\"CENTER\">\r\n            <children>\r\n                <GridPane fx:id=\"gridPaneCardsMachine\">\r\n                    <columnConstraints>\r\n                        <ColumnConstraints halignment=\"CENTER\" hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"100.0\" />\r\n                        <ColumnConstraints halignment=\"CENTER\" hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"100.0\" />\r\n                        <ColumnConstraints halignment=\"CENTER\" hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"100.0\" />\r\n                        <ColumnConstraints halignment=\"CENTER\" hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"100.0\" />\r\n                    </columnConstraints>\r\n                    <rowConstraints>\r\n                        <RowConstraints />\r\n                    </rowConstraints>\r\n                </GridPane>\r\n                <Button fx:id=\"ButtonSalir\" mnemonicParsing=\"false\" onAction=\"#onHandleButtonCloseGame\" prefHeight=\"25.0\" prefWidth=\"40.0\" text=\"Salir\" />\r\n            </children>\r\n        </HBox>\r\n    </top>\r\n    <bottom>\r\n        <HBox alignment=\"CENTER\" prefHeight=\"100.0\" prefWidth=\"200.0\" BorderPane.alignment=\"CENTER\">\r\n            <children>\r\n                <Button mnemonicParsing=\"false\" onAction=\"#onHandleBack\" prefWidth=\"74.0\" style=\"-fx-background-color: red;\" text=\"Anterior\" textFill=\"WHITE\">\r\n                    <font>\r\n                        <Font name=\"Berlin Sans FB\" size=\"12.0\" />\r\n                    </font></Button>\r\n                <GridPane fx:id=\"gridPaneCardsPlayer\">\r\n                    <columnConstraints>\r\n                        <ColumnConstraints halignment=\"CENTER\" hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"100.0\" />\r\n                        <ColumnConstraints halignment=\"CENTER\" hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"100.0\" />\r\n                        <ColumnConstraints halignment=\"CENTER\" hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"100.0\" />\r\n                        <ColumnConstraints halignment=\"CENTER\" hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"100.0\" />\r\n                    </columnConstraints>\r\n                    <rowConstraints>\r\n                        <RowConstraints minHeight=\"10.0\" prefHeight=\"30.0\" vgrow=\"SOMETIMES\" />\r\n                    </rowConstraints>\r\n                </GridPane>\r\n                <Button fx:id=\"ButtonSiguiente\" mnemonicParsing=\"false\" onAction=\"#onHandleNext\" prefWidth=\"74.0\" style=\"-fx-background-color: RED;\" text=\"Siguiente\" textFill=\"WHITE\" />\r\n            </children>\r\n        </HBox>\r\n    </bottom>\r\n</BorderPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/org/example/eiscuno/game-uno-view.fxml b/src/main/resources/org/example/eiscuno/game-uno-view.fxml
+--- a/src/main/resources/org/example/eiscuno/game-uno-view.fxml	(revision 8c8a3edb26efe998efd5bb160849bc21aa68ae09)
++++ b/src/main/resources/org/example/eiscuno/game-uno-view.fxml	(date 1718645823486)
+@@ -10,18 +10,18 @@
+ <?import javafx.scene.layout.RowConstraints?>
+ <?import javafx.scene.text.Font?>
+ 
+-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background-pane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.eiscuno.controller.GameUnoController">
++<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="600.0" styleClass="background-pane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.eiscuno.controller.GameUnoController">
+     <left>
+         <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+             <children>
+-                <Button fx:id="ButtonBaraja" layoutX="50.0" layoutY="30.0" mnemonicParsing="false" onAction="#onHandleTakeCard" prefHeight="155.0" prefWidth="100.0" text="Baraja" />
++                <Button fx:id="ButtonBaraja" layoutX="50.0" layoutY="56.0" mnemonicParsing="false" onAction="#onHandleTakeCard" prefHeight="155.0" prefWidth="100.0" text="Baraja" />
+             </children>
+         </Pane>
+     </left>
+     <right>
+         <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+             <children>
+-                <Button fx:id="ButtonUno" layoutX="59.0" layoutY="59.0" mnemonicParsing="false" onAction="#onHandleUno" prefHeight="50.0" prefWidth="100.0" text="UNO" />
++                <Button fx:id="ButtonUno" layoutX="60.0" layoutY="81.0" mnemonicParsing="false" onAction="#onHandleUno" prefHeight="50.0" prefWidth="100.0" text="UNO" />
+             </children>
+         </Pane>
+     </right>
