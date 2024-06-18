@@ -16,6 +16,7 @@ public class ThreadPlayMachine extends Thread {
         this.machinePlayer = machinePlayer;
         this.tableImageView = tableImageView;
         this.hasPlayerPlayed = false;
+
     }
 
     public void run() {
@@ -38,9 +39,12 @@ public class ThreadPlayMachine extends Thread {
         Card card = machinePlayer.getCard(index);
         table.addCardOnTheTable(card);
         tableImageView.setImage(card.getImage());
+        machinePlayer.getCardsPlayer().remove(index);
+        System.out.println("Se añadió "+tableImageView.getImage());
     }
 
     public void setHasPlayerPlayed(boolean hasPlayerPlayed) {
         this.hasPlayerPlayed = hasPlayerPlayed;
     }
+
 }
