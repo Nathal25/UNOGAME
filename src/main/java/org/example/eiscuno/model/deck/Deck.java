@@ -103,4 +103,8 @@ public class Deck {
     public boolean isEmpty() {
         return deckOfCards.isEmpty();
     }
+
+    public void setDeckOfCards(Stack<Card> deckOfCards) {
+        this.deckOfCards = deckOfCards;
+    }
 }

@@ -47,4 +47,7 @@ public class ThreadPlayMachine extends Thread {
         this.hasPlayerPlayed = hasPlayerPlayed;
     }
 
+    public boolean isHasPlayerPlayed() {
+        return hasPlayerPlayed;
+    }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -14,14 +15,20 @@
     <left>
         <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="ButtonBaraja" layoutX="50.0" layoutY="30.0" mnemonicParsing="false" onAction="#onHandleTakeCard" prefHeight="155.0" prefWidth="100.0" text="Baraja" />
+                <Button fx:id="ButtonBaraja" layoutX="50.0" layoutY="30.0" mnemonicParsing="false" onAction="#onHandleTakeCard" prefHeight="155.0" prefWidth="100.0" text="Baraja">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             </children>
         </Pane>
     </left>
     <right>
         <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="ButtonUno" layoutX="59.0" layoutY="59.0" mnemonicParsing="false" onAction="#onHandleUno" prefHeight="50.0" prefWidth="100.0" text="UNO" />
+                <Button fx:id="ButtonUno" layoutX="59.0" layoutY="59.0" mnemonicParsing="false" onAction="#onHandleUno" prefHeight="50.0" prefWidth="100.0" text="UNO">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             </children>
         </Pane>
     </right>
@@ -46,7 +53,10 @@
                         <RowConstraints />
                     </rowConstraints>
                 </GridPane>
-                <Button fx:id="ButtonSalir" mnemonicParsing="false" onAction="#onHandleButtonCloseGame" prefHeight="25.0" prefWidth="40.0" text="Salir" />
+                <Button fx:id="ButtonSalir" mnemonicParsing="false" onAction="#onHandleButtonCloseGame" prefHeight="25.0" prefWidth="40.0" text="Salir">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             </children>
         </HBox>
     </top>
