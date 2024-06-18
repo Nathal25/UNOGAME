@@ -141,12 +141,12 @@ public class GameUnoController {
 
         Image imagenNuevo = new Image(urlImageExit.toString());
         ImageView imageView = new ImageView(imagenNuevo);
-        imageView.setFitWidth(45);
-        imageView.setFitHeight(45);
+        imageView.setFitWidth(55);
+        imageView.setFitHeight(55);
         ButtonExit.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
         ButtonExit.setGraphic(imageView);
-        ButtonExit.setMinSize(40, 40);
-        ButtonExit.setMaxSize(40, 40);
+        ButtonExit.setMinSize(50, 50);
+        ButtonExit.setMaxSize(50, 50);
 
     }
 
@@ -210,9 +210,8 @@ public class GameUnoController {
                 threadPlayMachine.setHasPlayerPlayed(true);
                 printCardsHumanPlayer();
                 reStoreCards();
-                printCardMachinePlayer();
             });
-
+            printCardMachinePlayer();
             this.gridPaneCardsPlayer.add(cardImageView, i, 0);
         }
     }
