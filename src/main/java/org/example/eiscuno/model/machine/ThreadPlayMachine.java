@@ -2,6 +2,7 @@ package org.example.eiscuno.model.machine;
 
 import javafx.scene.image.ImageView;
 import org.example.eiscuno.model.card.Card;
+import org.example.eiscuno.model.deck.Deck;
 import org.example.eiscuno.model.player.Player;
 import org.example.eiscuno.model.table.Table;
 
@@ -43,6 +44,7 @@ public class ThreadPlayMachine extends Thread {
                 System.out.println("Son iguales");
             }
         } else {
+            hasPlayerPlayed=false;
             System.out.println("Es saltar turno");
         }
         table.addCardOnTheTable(card);
