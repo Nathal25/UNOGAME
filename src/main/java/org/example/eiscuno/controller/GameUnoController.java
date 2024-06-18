@@ -42,14 +42,10 @@ public class GameUnoController {
     private ImageView tableImageView;
 
     @FXML
-    private Button ButtonSalir;
+    private Button ButtonExit;
 
     @FXML
     private BorderPane borderPane;
-
-
-    @FXML
-    private Button ButtonSiguiente;
 
     @FXML
     private GameUno gameUno;
@@ -57,7 +53,7 @@ public class GameUnoController {
     private Button ButtonUno;
 
     @FXML
-    private Button ButtonBaraja;
+    private Button ButtonDeck;
 
     private Player humanPlayer;
     private Player machinePlayer;
@@ -147,10 +143,10 @@ public class GameUnoController {
         ImageView imageView = new ImageView(imagenNuevo);
         imageView.setFitWidth(45);
         imageView.setFitHeight(45);
-        ButtonSalir.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-        ButtonSalir.setGraphic(imageView);
-        ButtonSalir.setMinSize(40, 40);
-        ButtonSalir.setMaxSize(40, 40);
+        ButtonExit.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
+        ButtonExit.setGraphic(imageView);
+        ButtonExit.setMinSize(40, 40);
+        ButtonExit.setMaxSize(40, 40);
 
     }
 
@@ -162,10 +158,10 @@ public class GameUnoController {
         ImageView imageView = new ImageView(imagenNuevo);
         imageView.setFitWidth(110);
         imageView.setFitHeight(165);
-        ButtonBaraja.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-        ButtonBaraja.setGraphic(imageView);
-        ButtonBaraja.setMinSize(80, 80);
-        ButtonBaraja.setMaxSize(80, 80);
+        ButtonDeck.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
+        ButtonDeck.setGraphic(imageView);
+        ButtonDeck.setMinSize(80, 80);
+        ButtonDeck.setMaxSize(80, 80);
 
     }
 
