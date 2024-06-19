@@ -203,13 +203,24 @@ public class GameUnoController {
             ImageView cardImageView = card.getCard();
 
             cardImageView.setOnMouseClicked((MouseEvent event) -> {
-                // Aqui deberian verificar si pueden en la tabla jugar esa carta
-                gameUno.playCard(card);
-                tableImageView.setImage(card.getImage());
-                humanPlayer.removeCard(findPosCardsHumanPlayer(card));
-                threadPlayMachine.setHasPlayerPlayed(true);
-                printCardsHumanPlayer();
-                reStoreCards();
+                if (table.getCardsTable().isEmpty()){
+                    gameUno.playCard(card);
+                    tableImageView.setImage(card.getImage());
+                    humanPlayer.removeCard(findPosCardsHumanPlayer(card));
+                    threadPlayMachine.setHasPlayerPlayed(true);
+                    printCardsHumanPlayer();
+//                  printCardMachinePlayer();
+                }
+                else if (isPlayable(card, table.getCurrentCardOnTheTable())) {
+                    gameUno.playCard(card);
+                    tableImageView.setImage(card.getImage());
+                    humanPlayer.removeCard(findPosCardsHumanPlayer(card));
+                    threadPlayMachine.setHasPlayerPlayed(true);
+                    printCardsHumanPlayer();
+//                  printCardMachinePlayer();
+
+                }
+                else {System.out.println("Couldn't play card");}
             });
             printCardMachinePlayer();
             this.gridPaneCardsPlayer.add(cardImageView, i, 0);
@@ -231,7 +242,9 @@ public class GameUnoController {
         }
         reStoreCards();
     }
-
+    private boolean isPlayable(Card cardToBePlayed, Card cardOnTable){
+        return (cardToBePlayed.getValue().equals(cardOnTable.getValue()) || cardToBePlayed.getColor().equals(cardOnTable.getColor()));
+    }
     /**
      * Finds the position of a specific card in the human player's hand.
      *
