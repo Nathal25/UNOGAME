@@ -209,6 +209,7 @@ public class GameUnoController {
                     humanPlayer.removeCard(findPosCardsHumanPlayer(card));
                     threadPlayMachine.setHasPlayerPlayed(true);
                     printCardsHumanPlayer();
+                    System.out.println("Cartas de la máquina: "+ machinePlayer.getCardsPlayer().size());
 //                  printCardMachinePlayer();
                 }
                 else if (isPlayable(card, table.getCurrentCardOnTheTable())) {
@@ -217,6 +218,7 @@ public class GameUnoController {
                     humanPlayer.removeCard(findPosCardsHumanPlayer(card));
                     threadPlayMachine.setHasPlayerPlayed(true);
                     printCardsHumanPlayer();
+                    System.out.println("Cartas de la máquina: " + machinePlayer.getCardsPlayer().size());
 //                  printCardMachinePlayer();
 
                 }
@@ -243,7 +245,7 @@ public class GameUnoController {
         reStoreCards();
     }
     private boolean isPlayable(Card cardToBePlayed, Card cardOnTable){
-        return (cardToBePlayed.getValue().equals(cardOnTable.getValue()) || cardToBePlayed.getColor().equals(cardOnTable.getColor()));
+        return (cardToBePlayed.getValue().equals(cardOnTable.getValue()) || cardToBePlayed.getColor().equals(cardOnTable.getColor()) || cardToBePlayed.getColor().equals("NON_COLOR"));
     }
     /**
      * Finds the position of a specific card in the human player's hand.

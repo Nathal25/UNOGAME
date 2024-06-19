@@ -30,7 +30,7 @@ public class Deck {
                     cardEnum.name().startsWith("BLUE_") ||
                     cardEnum.name().startsWith("RED_") ||
                     cardEnum.name().startsWith("SKIP_") ||
-                    cardEnum.name().startsWith("RESERVE_") ||
+                    cardEnum.name().startsWith("REVERSE_") ||
                     cardEnum.name().startsWith("TWO_WILD_DRAW_") ||
                     cardEnum.name().equals("FOUR_WILD_DRAW") ||
                     cardEnum.name().equals("WILD")) {
@@ -64,8 +64,8 @@ public class Deck {
             return "8";
         } else if (name.endsWith("9")){
             return "9";
-        } else if (name.contains("RESERVE")) {
-            return "RESERVE";
+        } else if (name.contains("REVERSE")) {
+            return "REVERSE";
         } else if (name.contains("TWO_WILD_DRAW")) {
             return "+2";
         } else if (name.equals("FOUR_WILD_DRAW")) {
