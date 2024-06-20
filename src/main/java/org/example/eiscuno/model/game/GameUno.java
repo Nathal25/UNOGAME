@@ -72,16 +72,6 @@ public class GameUno implements IGameUno {
         }
         else if (card.getValue().equals("+4")){
             eatCard(this.machinePlayer, 4);
-
-        }
-        else if (card.getValue().equals("WILD")){
-
-        }
-        else if (card.getValue().equals("SKIP")){
-
-        }
-        else if (card.getValue().equals("REVERSE")){
-
         }
     }
 
@@ -142,3 +132,4 @@ public class GameUno implements IGameUno {
         return null;
     }
 }
+
