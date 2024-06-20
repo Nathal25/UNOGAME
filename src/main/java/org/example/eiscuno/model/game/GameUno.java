@@ -1,3 +1,4 @@
+
 package org.example.eiscuno.model.game;
 
 import org.example.eiscuno.model.card.Card;
@@ -132,4 +133,3 @@ public class GameUno implements IGameUno {
         return null;
     }
 }
-
