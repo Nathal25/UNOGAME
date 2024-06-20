@@ -26,7 +26,7 @@ import org.example.eiscuno.view.GameUnoStage;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Stack;
-
+import java.util.ArrayList;
 
 /**
  * Controller class for the Uno game.
@@ -83,9 +83,7 @@ public class GameUnoController {
         addImageButtonDecks();
         setBackgroundImagePane(borderPane, "/org/example/eiscuno/images/background_uno.png");
 
-
-
-        threadSingUNOMachine = new ThreadSingUNOMachine(this.humanPlayer.getCardsPlayer(), this); // Pasar la referencia del controlador
+        threadSingUNOMachine = new ThreadSingUNOMachine(this.humanPlayer.getCardsPlayer(),this);
         Thread t = new Thread(threadSingUNOMachine, "ThreadSingUNO");
         t.start();
 
@@ -114,6 +112,15 @@ public class GameUnoController {
 //        }
     }
 
+    /**
+     *
+     * @param deckOfCards
+     */
+    public void newCards(Stack<Card> deckOfCards){
+        if (deck.isEmpty()){
+            deck.setDeckOfCards(deckOfCards);
+        }
+    }
 
     //Carta automaticamente
     public void forceHumanPlayerToTakeCard() {
@@ -122,7 +129,7 @@ public class GameUnoController {
             if (unoButtonPressed ) {
                 threadPlayMachine.setHasPlayerPlayed(true);
                 unoButtonPressed = false; // Restablecer la bandera
-                return;
+                return; // Salir del método sin mostrar la Alert Box ni tomar carta
             }
 
             this.humanPlayer.addCard(deck.takeCard());
@@ -131,11 +138,7 @@ public class GameUnoController {
 
         });
     }
-    public void newCards(Stack<Card> deckOfCards){
-        if (deck.isEmpty()){
-            deck.setDeckOfCards(deckOfCards);
-        }
-    }
+
     //Imagen ButtonUno
     public void addImageButtonUno() {
         URL urlImageUno = getClass().getResource("/org/example/eiscuno/images/button_uno.png");
@@ -216,20 +219,61 @@ public class GameUnoController {
         for (int i = 0; i < currentVisibleCardsHumanPlayer.length; i++) {
             Card card = currentVisibleCardsHumanPlayer[i];
             ImageView cardImageView = card.getCard();
+            if(canHumanPlay()){
+                cardImageView.setOnMouseClicked((MouseEvent event) -> {
+                    if (table.getCardsTable().isEmpty()){
+                        gameUno.playCard(card);
+                        tableImageView.setImage(card.getImage());
+                        humanPlayer.removeCard(findPosCardsHumanPlayer(card));
+                        printCardsHumanPlayer();
+                        if (card.getValue().equals("+4") || card.getValue().equals("+2") || card.getValue().equals("SKIP")){
+                            threadPlayMachine.setHasPlayerPlayed(false);
+                        } else{threadPlayMachine.setHasPlayerPlayed(true);}
+                        System.out.println("Cartas de la máquina: "+ machinePlayer.getCardsPlayer().size());
+                        System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
+//                  printCardMachinePlayer();
+                    }
+                    else if (isPlayable(card, table.getCurrentCardOnTheTable())) {
+                        gameUno.playCard(card);
+                        tableImageView.setImage(card.getImage());
+                        humanPlayer.removeCard(findPosCardsHumanPlayer(card));
+                        if (card.getValue().equals("+4") || card.getValue().equals("+2") || card.getValue().equals("SKIP")){
+                            threadPlayMachine.setHasPlayerPlayed(false);
+                        } else{threadPlayMachine.setHasPlayerPlayed(true);}
+                        printCardsHumanPlayer();
+                        System.out.println("Cartas de la máquina: " + machinePlayer.getCardsPlayer().size());
+                        System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
+//                  printCardMachinePlayer();
 
-            cardImageView.setOnMouseClicked((MouseEvent event) -> {
-                // Aqui deberian verificar si pueden en la tabla jugar esa carta
-                gameUno.playCard(card);
-                tableImageView.setImage(card.getImage());
-                humanPlayer.removeCard(findPosCardsHumanPlayer(card));
-                threadPlayMachine.setHasPlayerPlayed(true);
-                printCardsHumanPlayer();
-                reStoreCards();
-            });
+                    }
+                    else {System.out.println("Couldn't play card");}
+                });
+            }
+
             printCardMachinePlayer();
             this.gridPaneCardsPlayer.add(cardImageView, i, 0);
         }
     }
+    public boolean canHumanPlay(){
+        /*if(!this.table.getCardsTable().isEmpty()){
+            if(this.table.getCurrentCardOnTheTable().getValue().equals("+2") || this.table.getCurrentCardOnTheTable().getValue().equals("+4")){
+                if(this.table.getCurrentCardOnTheTable().getValue().equals("+2")){
+                    this.gameUno.eatCard(this.humanPlayer, 2);
+                    threadPlayMachine.setHasPlayerPlayed(true);
+                }
+                else if(this.table.getCurrentCardOnTheTable().getValue().equals("+4")){
+                    this.gameUno.eatCard(this.humanPlayer, 4);
+                    threadPlayMachine.setHasPlayerPlayed(true);
+                }
+                //threadPlayMachine.setHasPlayerPlayed(true);
+                return false;
+            }
+        }
+
+         */
+        return true;
+    }
+
     private void printCardMachinePlayer(){
         this.gridPaneCardsMachine.getChildren().clear();
 
@@ -247,6 +291,9 @@ public class GameUnoController {
         reStoreCards();
     }
 
+    private boolean isPlayable(Card cardToBePlayed, Card cardOnTable){
+        return (cardToBePlayed.getValue().equals(cardOnTable.getValue()) || cardToBePlayed.getColor().equals(cardOnTable.getColor()) || cardToBePlayed.getColor().equals("NON_COLOR") || cardOnTable.getColor().equals("NON_COLOR"));
+    }
     /**
      * Finds the position of a specific card in the human player's hand.
      *
@@ -315,18 +362,27 @@ public class GameUnoController {
 //        Card card=deck.takeCard();
 //        this.humanPlayer.addCard(card);
 //        printCardsHumanPlayer();
-        if(!threadPlayMachine.isHasPlayerPlayed()){
+        if (deck.isEmpty()){
+            Stack<Card> newDeck = new Stack<>();
+            while (!this.table.getCardsTable().isEmpty()) {
+                newDeck.push(this.table.getCardsTable().remove(0));
+            }
+            System.out.println(this.table.getCardsTable().size());
+            System.out.println(newDeck.size());
+            this.deck.setDeckOfCards(newDeck);
+        }
+        if (!threadPlayMachine.isHasPlayerPlayed()) {
             this.humanPlayer.addCard(deck.takeCard());
-            System.out.println("Se añadio la carta "+deck.takeCard());
-            System.out.println("Al usuario "+humanPlayer.getCardsPlayer());
+            System.out.println("Se añadio la carta " + deck.takeCard());
+            System.out.println("Al usuario " + humanPlayer.getCardsPlayer());
             printCardsHumanPlayer();
-        }else {
+        } else {
             this.machinePlayer.addCard(deck.takeCard());
             printCardMachinePlayer();
         }
         System.out.println("BotonBaraja");
-    }
 
+    }
     /**
      * Handles the action of saying "Uno".
      *

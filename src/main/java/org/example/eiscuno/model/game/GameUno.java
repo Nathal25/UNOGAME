@@ -1,10 +1,11 @@
+
 package org.example.eiscuno.model.game;
 
 import org.example.eiscuno.model.card.Card;
 import org.example.eiscuno.model.deck.Deck;
 import org.example.eiscuno.model.player.Player;
 import org.example.eiscuno.model.table.Table;
-
+// Actualizar
 /**
  * Represents a game of Uno.
  * This class manages the game logic and interactions between players, deck, and the table.
@@ -132,4 +133,3 @@ public class GameUno implements IGameUno {
         return null;
     }
 }
-
