@@ -18,7 +18,6 @@ public class ThreadPlayMachine extends Thread {
         this.tableImageView = tableImageView;
         this.hasPlayerPlayed = false;
     }
-
     public void run() {
         while (true) {
             if (hasPlayerPlayed) {
