@@ -5,15 +5,6 @@ import org.example.eiscuno.model.card.Card;
 
 import java.util.ArrayList;
 
-import java.util.ArrayList;
-
-
-import org.example.eiscuno.controller.GameUnoController;
-import org.example.eiscuno.model.card.Card;
-
-import java.util.ArrayList;
-
-import java.util.ArrayList;
 
 public class ThreadSingUNOMachine implements Runnable {
     private ArrayList<Card> cardsPlayer;

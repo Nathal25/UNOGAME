@@ -34,7 +34,7 @@ public class ThreadPlayMachine extends Thread {
     }
 
     // Coloca la carta en la mesa si es válida
-    private void putCardOnTheTable() {
+    public void putCardOnTheTable() {
         Card card = getValidCardToPlay();
 
         if (card != null) {
