@@ -17,7 +17,7 @@ public class PlayerTurnState implements GameState {
 
     @Override
     public void drawCard() {
-        controller.humanDrawCard();
+        //controller.humanDrawCard();
         controller.setState(controller.getMachineTurnState());
     }
 

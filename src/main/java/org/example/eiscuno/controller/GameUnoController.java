@@ -1,5 +1,6 @@
 package org.example.eiscuno.controller;
 
+import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import javafx.util.Duration;
 import org.example.eiscuno.model.GameState;
 import org.example.eiscuno.model.MachineTurnState;
 import org.example.eiscuno.model.PlayerTurnState;
@@ -57,7 +59,6 @@ public class GameUnoController {
     private Deck deck;
     private Table table;
 
-    private boolean unoButtonPressed = false;
 
     private int posInitCardToShow;
 
@@ -69,9 +70,9 @@ public class GameUnoController {
     private GameState machineTurnState;
     private GameState currentState;
 
-    /**
-     *
-     */
+    private boolean unoButtonPressed = false;
+    private PauseTransition unoTimer;
+
     @FXML
     public void initialize() {
         initVariables();
@@ -91,6 +92,13 @@ public class GameUnoController {
         printCardMachinePlayer();
         reStoreCards();
 
+        // Inicializar el temporizador
+        unoTimer = new PauseTransition(Duration.seconds(2));
+        unoTimer.setOnFinished(event -> {
+            if (!unoButtonPressed) {
+                addTwoCardsToHumanPlayer();
+            }
+        });
     }
 
     /**
@@ -117,6 +125,15 @@ public class GameUnoController {
             deck.setDeckOfCards(deckOfCards);
         }
     }
+    private void addTwoCardsToHumanPlayer() {
+        gameUno.eatCard(humanPlayer,2);
+//        humanPlayer.addCard(deck.takeCard());
+//        humanPlayer.addCard(deck.takeCard());
+        printCardsHumanPlayer();
+        setState(machineTurnState);
+        startMachineTurn();
+        System.out.println("No se presionó UNO a tiempo. Se agregaron dos cartas.");
+    }
 
     /**
      *
@@ -124,25 +141,12 @@ public class GameUnoController {
     public void forceHumanPlayerToTakeCard() {
         Platform.runLater(() -> {
             Card card = deck.takeCard();
-            if (canHumanPlay() && isPlayable(card, table.getCurrentCardOnTheTable())) {
-                humanPlayer.addCard(card);
-                gameUno.playCard(card);
-                tableImageView.setImage(card.getImage());
-                humanPlayer.removeCard(findPosCardsHumanPlayer(card));
-                printCardsHumanPlayer();
-                if (card.getValue().equals("+4") || card.getValue().equals("+2") || card.getValue().equals("SKIP")) {
-                    threadPlayMachine.setHasPlayerPlayed(false);
-                } else {
-                    threadPlayMachine.setHasPlayerPlayed(true);
-                }
-                System.out.println("Cartas de la máquina: " + machinePlayer.getCardsPlayer().size());
-                System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
-            } else {
-                humanPlayer.addCard(card);
-                printCardsHumanPlayer();
-                setState(machineTurnState);
-                startMachineTurn();
-            }
+//            humanPlayer.addCard(card);
+//            System.out.println("Se añadio una carta");
+            printCardsHumanPlayer();
+            System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
+            System.out.println("Carta tomada: " + card);
+            // Ya no cambia el turno aquí
         });
     }
 
@@ -266,18 +270,18 @@ public class GameUnoController {
     /**
      *
      */
-    public void humanDrawCard() {
-        humanPlayer.addCard(deck.takeCard());
+    public void drawCard() {
+        Card card = deck.takeCard();
+        humanPlayer.addCard(card);
         printCardsHumanPlayer();
-        setState(machineTurnState);
-        startMachineTurn();
-    }
-
-    /**
-     *
-     */
-    public void humanPressUnoButton() {
-        unoButtonPressed = true;
+        // Detener el temporizador si está corriendo
+        if (unoTimer.getStatus() == PauseTransition.Status.RUNNING) {
+            unoTimer.stop();
+        }
+        System.out.println("Se tomó una carta.");
+        System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
+        System.out.println("Carta tomada: " + card);
+        System.out.println("Turno de " + playerTurnState);
     }
 
     /**
@@ -307,16 +311,8 @@ public class GameUnoController {
     /**
      *
      */
-    public void drawCard() {
-        currentState.drawCard();
-    }
 
-    /**
-     *
-     */
-    public void pressUnoButton() {
-        currentState.pressUnoButton();
-    }
+
 
     /**
      * Prints the human player's cards on the grid pane.
@@ -347,6 +343,11 @@ public class GameUnoController {
             // Agregar la imagen de la carta al gridPane
             this.gridPaneCardsPlayer.add(cardImageView, i, 0);
         }
+
+        // Inicia el temporizador si al jugador le quedan dos cartas
+        if (humanPlayer.getCardsPlayer().size() == 1) {
+            startUnoTimer();
+        }
     }
     /**
      * Maneja el evento cuando el jugador juega la primera carta en el juego.
@@ -365,11 +366,11 @@ public class GameUnoController {
         }
         System.out.println("Cartas de la máquina: " + machinePlayer.getCardsPlayer().size());
         System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
-        //printCardMachinePlayer(); // Si necesitas actualizar la interfaz de la máquina aquí
+        printCardMachinePlayer();
     }
 
     /**
-     * Maneja el evento cuando el jugador juega una carta que es jugable según las reglas del juego.
+     * Handles the moment when the human player plays a card that follows the rules of the game
      *
      * @param card la carta que el jugador quiere jugar
      */
@@ -385,7 +386,8 @@ public class GameUnoController {
         printCardsHumanPlayer();
         System.out.println("Cartas de la máquina: " + machinePlayer.getCardsPlayer().size());
         System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
-        //printCardMachinePlayer(); // Si necesitas actualizar la interfaz de la máquina aquí
+        setState(machineTurnState); // Cambiar el turno aquí después de que se juegue la carta
+        startMachineTurn();
     }
 
     /**
@@ -447,15 +449,45 @@ public class GameUnoController {
     }
 
     /**
-     * Handles the even when the human_payer presses the button
+     * Handles the event when the human player presses the button
      *
-     * @param event
+     * @param event el evento de acción
      */
     @FXML
     void onHandleUno(ActionEvent event) {
+        if (humanPlayer.getCardsPlayer().size() == 2) {
+            unoButtonPressed = true;
+            System.out.println("UNO presionado a tiempo.");
+            // Detener el temporizador si está corriendo
+            if (unoTimer.getStatus() == PauseTransition.Status.RUNNING) {
+                unoTimer.stop();
+            }
+        }
         pressUnoButton();
     }
 
+    /**
+     * Method called when the UNO button is pressed
+     */
+    public void pressUnoButton() {
+        humanPressUnoButton();
+        currentState.pressUnoButton();
+    }
+
+    /**
+     * Marca que el jugador humano ha presionado el botón UNO
+     */
+    public void humanPressUnoButton() {
+        unoButtonPressed = true;
+    }
+
+    /**
+     * Inicia el temporizador para presionar el botón UNO
+     */
+    public void startUnoTimer() {
+        unoButtonPressed = false;
+        unoTimer.playFromStart();
+    }
     /**
      *  Closes the game when the button Exit is clicked
      * @param event
@@ -463,7 +495,7 @@ public class GameUnoController {
     @FXML
     void onHandleButtonCloseGame(ActionEvent event) {
         GameUnoStage.deleteInstance();
-
+        threadSingUNOMachine.stop();
     }
 
     /**

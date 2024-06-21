@@ -42,9 +42,7 @@ public class ThreadSingUNOMachine implements Runnable {
         }
     }
 
-
     public void stop() {
         running = false; // Detener la ejecución del hilo
     }
-
 }
