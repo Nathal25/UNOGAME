@@ -9,8 +9,12 @@ import java.util.ArrayList;
 public class ThreadSingUNOMachine implements Runnable {
     private ArrayList<Card> cardsPlayer;
     private volatile boolean unoAnnounced;
+
+    //private volatile boolean twoAnnounced;
     private volatile boolean running;
     private GameUnoController controller; // Referencia al controlador
+
+
 
     public ThreadSingUNOMachine(ArrayList<Card> cardsPlayer, GameUnoController controller) {
         this.cardsPlayer = cardsPlayer;
@@ -41,6 +45,18 @@ public class ThreadSingUNOMachine implements Runnable {
             unoAnnounced = false;
         }
     }
+
+    /* private void machinePlayerToTakeCard(){
+        if (controller.getMachinePlayer().getCardsPlayer().size() == 1 && !twoAnnounced) {
+            System.out.println("UNO PARA MAQUINA");
+            twoAnnounced = true; // Marcar que el anuncio ya se hizo
+            controller.machinePlayerToTakeCard();
+        } else if (controller.getMachinePlayer().getCardsPlayer().size() != 1 && twoAnnounced) {
+            twoAnnounced = false; // Reiniciar la bandera si el jugador no tiene exactamente una carta
+        }
+    }
+
+    */
 
     public void stop() {
         running = false; // Detener la ejecución del hilo

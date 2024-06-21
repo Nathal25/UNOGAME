@@ -1,6 +1,8 @@
 package org.example.eiscuno.controller;
 
+import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -148,7 +150,27 @@ public class GameUnoController {
             System.out.println("Carta tomada: " + card);
             // Ya no cambia el turno aquí
         });
+
     }
+    /*  public void machinePlayerToTakeCard() {
+        Platform.runLater(() -> {
+            if (unoButtonPressed) {
+                Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(5), event -> {
+                    if (unoButtonPressed) {
+                        this.machinePlayer.addCard(deck.takeCard());
+                        printCardMachinePlayer();
+                        unoButtonPressed = false;
+                    }
+                }));
+                timeline.play();
+            } else {
+                // No se presionó el botón UNO dentro de los 5 segundos
+                System.out.println("UNO MAQUINA (NO COME CARTA)");
+            }
+        });
+    }
+
+     */
 
     /**
      *
@@ -494,8 +516,17 @@ public class GameUnoController {
      */
     @FXML
     void onHandleButtonCloseGame(ActionEvent event) {
+        // Detener threadSingUNOMachine si está en ejecución
+        if (threadSingUNOMachine != null) {
+            threadSingUNOMachine.stop();
+        }
+
+        // Detener threadPlayMachine si está en ejecución
+        if (threadPlayMachine != null) {
+            threadPlayMachine.stopRunning();
+        }
+
         GameUnoStage.deleteInstance();
-        threadSingUNOMachine.stop();
     }
 
     /**
