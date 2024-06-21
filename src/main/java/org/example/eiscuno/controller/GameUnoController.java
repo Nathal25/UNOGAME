@@ -219,7 +219,6 @@ public class GameUnoController {
         for (int i = 0; i < currentVisibleCardsHumanPlayer.length; i++) {
             Card card = currentVisibleCardsHumanPlayer[i];
             ImageView cardImageView = card.getCard();
-            if(canHumanPlay()){
                 cardImageView.setOnMouseClicked((MouseEvent event) -> {
                     if (table.getCardsTable().isEmpty()){
                         gameUno.playCard(card);
@@ -231,24 +230,25 @@ public class GameUnoController {
                         } else{threadPlayMachine.setHasPlayerPlayed(true);}
                         System.out.println("Cartas de la máquina: "+ machinePlayer.getCardsPlayer().size());
                         System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
-//                  printCardMachinePlayer();
+    //                  printCardMachinePlayer();
                     }
                     else if (isPlayable(card, table.getCurrentCardOnTheTable())) {
-                        gameUno.playCard(card);
-                        tableImageView.setImage(card.getImage());
-                        humanPlayer.removeCard(findPosCardsHumanPlayer(card));
-                        if (card.getValue().equals("+4") || card.getValue().equals("+2") || card.getValue().equals("SKIP")){
-                            threadPlayMachine.setHasPlayerPlayed(false);
-                        } else{threadPlayMachine.setHasPlayerPlayed(true);}
-                        printCardsHumanPlayer();
-                        System.out.println("Cartas de la máquina: " + machinePlayer.getCardsPlayer().size());
-                        System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
-//                  printCardMachinePlayer();
-
+                            gameUno.playCard(card);
+                            tableImageView.setImage(card.getImage());
+                            humanPlayer.removeCard(findPosCardsHumanPlayer(card));
+                            if (card.getValue().equals("+4") || card.getValue().equals("+2") || card.getValue().equals("SKIP")) {
+                                threadPlayMachine.setHasPlayerPlayed(false);
+                            } else {
+                                threadPlayMachine.setHasPlayerPlayed(true);
+                            }
+                            printCardsHumanPlayer();
+                            System.out.println("Cartas de la máquina: " + machinePlayer.getCardsPlayer().size());
+                            System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
+                            printCardMachinePlayer();
                     }
+
                     else {System.out.println("Couldn't play card");}
                 });
-            }
 
             printCardMachinePlayer();
             this.gridPaneCardsPlayer.add(cardImageView, i, 0);
@@ -289,6 +289,21 @@ public class GameUnoController {
             this.gridPaneCardsMachine.add(newCardImageView,i,0);
         }
         reStoreCards();
+    }
+
+    private void checkSpecialCards() {
+        if (threadPlayMachine.getLastPlayedCard().getValue().equals("+2")) {
+            this.gameUno.eatCard(humanPlayer, 2);
+            System.out.println("El jugador come 2 cartas");
+            threadPlayMachine.setHasPlayerPlayed(true);
+        } else if (threadPlayMachine.getLastPlayedCard().getValue().equals("+4")) {
+            this.gameUno.eatCard(humanPlayer, 4);
+            System.out.println("El jugador come 4 cartas");
+            threadPlayMachine.setHasPlayerPlayed(true);
+        } else if (threadPlayMachine.getLastPlayedCard().getValue().equals("SKIP")) {
+            threadPlayMachine.setHasPlayerPlayed(true);
+            System.out.println("Se salta el turno del jugador");
+        }
     }
 
     private boolean isPlayable(Card cardToBePlayed, Card cardOnTable){
@@ -365,21 +380,26 @@ public class GameUnoController {
         if (deck.isEmpty()){
             Stack<Card> newDeck = new Stack<>();
             while (!this.table.getCardsTable().isEmpty()) {
-                newDeck.push(this.table.getCardsTable().remove(0));
+                newDeck.push(this.table.getCardsTable().get(0));
+                this.table.getCardsTable().remove(0);
             }
-            System.out.println(this.table.getCardsTable().size());
-            System.out.println(newDeck.size());
+            System.out.println("Cartas en la mesa: " + this.table.getCardsTable().size());
+            System.out.println("Nuevas cartas en el mazo: " + newDeck.size());
             this.deck.setDeckOfCards(newDeck);
         }
         if (!threadPlayMachine.isHasPlayerPlayed()) {
-            this.humanPlayer.addCard(deck.takeCard());
+            Card drawnCard = deck.takeCard();
+            this.humanPlayer.addCard(drawnCard);
             System.out.println("Se añadio la carta " + deck.takeCard());
             System.out.println("Al usuario " + humanPlayer.getCardsPlayer());
             printCardsHumanPlayer();
-        } else {
+            if (!isPlayable(drawnCard, this.table.getCurrentCardOnTheTable())){
+                threadPlayMachine.setHasPlayerPlayed(true);
+            }
+        } /*else {
             this.machinePlayer.addCard(deck.takeCard());
             printCardMachinePlayer();
-        }
+        }*/
         System.out.println("BotonBaraja");
 
     }
