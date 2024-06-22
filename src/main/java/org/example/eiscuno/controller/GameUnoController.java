@@ -12,6 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.util.Duration;
+import org.example.eiscuno.model.AlertWinner;
 import org.example.eiscuno.model.GameState;
 import org.example.eiscuno.model.MachineTurnState;
 import org.example.eiscuno.model.PlayerTurnState;
@@ -362,12 +363,14 @@ public class GameUnoController {
 
             // Agregar la imagen de la carta al gridPane
             this.gridPaneCardsPlayer.add(cardImageView, i, 0);
+
         }
 
         // Inicia el temporizador si al jugador le quedan dos cartas
         if (humanPlayer.getCardsPlayer().size() == 1) {
             startUnoTimer();
         }
+        showWinner();
     }
     /**
      * Maneja el evento cuando el jugador juega la primera carta en el juego.
@@ -509,24 +512,35 @@ public class GameUnoController {
         unoTimer.playFromStart();
     }
     /**
-     *  Closes the game when the button Exit is clicked
+     *  Calls the method that closes the game
      * @param event
      */
     @FXML
     void onHandleButtonCloseGame(ActionEvent event) {
-        // Detener threadSingUNOMachine si está en ejecución
+        stopGame();
+    }
+
+    /**
+     * Calls the method that stops the threads and deletes de instance of GameUnoStage
+     */
+    public void stopGame(){
+        stopThreads();
+        GameUnoStage.deleteInstance();
+    }
+    /**
+     * Stop the threads threadSingUNOMachine and threadPlayMachine
+     */
+    public void stopThreads(){
+        // Stops threadSingUNOMachine
         if (threadSingUNOMachine != null) {
             threadSingUNOMachine.stop();
         }
 
-        // Detener threadPlayMachine si está en ejecución
+        // Stops threadPlayMachine
         if (threadPlayMachine != null) {
             threadPlayMachine.stopRunning();
         }
-
-        GameUnoStage.deleteInstance();
     }
-
     /**
      * Handles the "Back" button action to show the previous set of cards.
      *
@@ -550,6 +564,20 @@ public class GameUnoController {
         if (this.posInitCardToShow < this.humanPlayer.getCardsPlayer().size() - 4) {
             this.posInitCardToShow++;
             printCardsHumanPlayer();
+        }
+    }
+
+    /**
+     * shows an alert when the human player has 0 card winning the game
+     */
+    public void showWinner(){
+        if(this.humanPlayer.getCardsPlayer().size()==0){
+            String tittle="WINNER";
+            String header ="";
+            String content ="¡Has Ganado!";
+            AlertWinner alertBox=new AlertWinner();
+            alertBox.showMessageWinner(tittle,header,content);
+            stopGame();
         }
     }
 }

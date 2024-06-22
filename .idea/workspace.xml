@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="bug del boton UNO arreglado">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/AlertWinner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/IAlertWinner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/deck/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/deck/Deck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +21,9 @@
         <option value="JavaFXApplication" />
         <option value="Enum" />
         <option value="CSS File" />
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -159,7 +160,7 @@
       <workItem from="1718303003074" duration="638000" />
       <workItem from="1718908159224" duration="17303000" />
       <workItem from="1718982387031" duration="4412000" />
-      <workItem from="1719017383506" duration="653000" />
+      <workItem from="1719017383506" duration="2899000" />
     </task>
     <task id="LOCAL-00001" summary="Se implementan las cartas de la maquina en la parte superior">
       <option name="closed" value="true" />
@@ -185,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718923600371</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="bug del boton UNO arreglado">
+      <option name="closed" value="true" />
+      <created>1719018088094</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719018088094</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +216,7 @@
     <MESSAGE value="Se implementan las cartas de la maquina en la parte superior" />
     <MESSAGE value="se cambió reserve por reverse" />
     <MESSAGE value="Se implementó el patron de diseño State, esto permite que cambie de estado dependiendo del jugador y, por ende, el jugador no pueda realizar acciones mientras esté jugando la maquina a excepción de presionar el boton UNO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se implementó el patron de diseño State, esto permite que cambie de estado dependiendo del jugador y, por ende, el jugador no pueda realizar acciones mientras esté jugando la maquina a excepción de presionar el boton UNO" />
+    <MESSAGE value="bug del boton UNO arreglado" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug del boton UNO arreglado" />
   </component>
 </project>
