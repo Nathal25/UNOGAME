@@ -129,8 +129,6 @@ public class GameUnoController {
     }
     private void addTwoCardsToHumanPlayer() {
         gameUno.eatCard(humanPlayer,2);
-//        humanPlayer.addCard(deck.takeCard());
-//        humanPlayer.addCard(deck.takeCard());
         printCardsHumanPlayer();
         setState(machineTurnState);
         startMachineTurn();
@@ -477,7 +475,7 @@ public class GameUnoController {
      */
     @FXML
     void onHandleUno(ActionEvent event) {
-        if (humanPlayer.getCardsPlayer().size() == 2) {
+        if (humanPlayer.getCardsPlayer().size() == 1) {
             unoButtonPressed = true;
             System.out.println("UNO presionado a tiempo.");
             // Detener el temporizador si está corriendo
