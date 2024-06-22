@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="bug del boton UNO arreglado">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/AlertWinner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/IAlertWinner.java" afterDir="false" />
+    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="Se muestra una alerta cuando el jugador humano ya no tiene cartas. Se hicieron cambios respecto al boton de cerrar el juego, se implementaron metodos que simplifican su funcionamiento y que permite a la alerta llamarlos para que cierre el juego">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/PlayerTurnState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/PlayerTurnState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +159,7 @@
       <workItem from="1718303003074" duration="638000" />
       <workItem from="1718908159224" duration="17303000" />
       <workItem from="1718982387031" duration="4412000" />
-      <workItem from="1719017383506" duration="2899000" />
+      <workItem from="1719017383506" duration="4371000" />
     </task>
     <task id="LOCAL-00001" summary="Se implementan las cartas de la maquina en la parte superior">
       <option name="closed" value="true" />
@@ -194,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719018088094</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Se muestra una alerta cuando el jugador humano ya no tiene cartas. Se hicieron cambios respecto al boton de cerrar el juego, se implementaron metodos que simplifican su funcionamiento y que permite a la alerta llamarlos para que cierre el juego">
+      <option name="closed" value="true" />
+      <created>1719020830230</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719020830230</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +224,7 @@
     <MESSAGE value="se cambió reserve por reverse" />
     <MESSAGE value="Se implementó el patron de diseño State, esto permite que cambie de estado dependiendo del jugador y, por ende, el jugador no pueda realizar acciones mientras esté jugando la maquina a excepción de presionar el boton UNO" />
     <MESSAGE value="bug del boton UNO arreglado" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug del boton UNO arreglado" />
+    <MESSAGE value="Se muestra una alerta cuando el jugador humano ya no tiene cartas. Se hicieron cambios respecto al boton de cerrar el juego, se implementaron metodos que simplifican su funcionamiento y que permite a la alerta llamarlos para que cierre el juego" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se muestra una alerta cuando el jugador humano ya no tiene cartas. Se hicieron cambios respecto al boton de cerrar el juego, se implementaron metodos que simplifican su funcionamiento y que permite a la alerta llamarlos para que cierre el juego" />
   </component>
 </project>
