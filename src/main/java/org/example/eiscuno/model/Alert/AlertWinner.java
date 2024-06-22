@@ -1,4 +1,4 @@
-package org.example.eiscuno.model;
+package org.example.eiscuno.model.Alert;
 
 import javafx.scene.control.Alert;
 import javafx.scene.image.ImageView;

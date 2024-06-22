@@ -1,4 +1,4 @@
-package org.example.eiscuno.model;
+package org.example.eiscuno.model.StatePatron;
 
 import org.example.eiscuno.controller.GameUnoController;
 import org.example.eiscuno.model.card.Card;

@@ -1,8 +1,6 @@
 package org.example.eiscuno.controller;
 
-import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
-import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,10 +10,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.util.Duration;
-import org.example.eiscuno.model.AlertWinner;
-import org.example.eiscuno.model.GameState;
-import org.example.eiscuno.model.MachineTurnState;
-import org.example.eiscuno.model.PlayerTurnState;
+import org.example.eiscuno.model.Alert.AlertWinner;
+import org.example.eiscuno.model.StatePatron.GameState;
+import org.example.eiscuno.model.StatePatron.MachineTurnState;
+import org.example.eiscuno.model.StatePatron.PlayerTurnState;
 import org.example.eiscuno.model.card.Card;
 import org.example.eiscuno.model.deck.Deck;
 import org.example.eiscuno.model.game.GameUno;
@@ -302,6 +300,7 @@ public class GameUnoController {
             Platform.runLater(() -> setState(playerTurnState));
         }).start();
         printCardsHumanPlayer();
+
     }
 
 
