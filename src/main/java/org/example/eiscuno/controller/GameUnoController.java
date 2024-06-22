@@ -298,9 +298,10 @@ public class GameUnoController {
             }
             threadPlayMachine.putCardOnTheTable();
             gameUno.checkForSpecialCard(threadPlayMachine.getLastPlayedCard(), humanPlayer);
-            //printCardsHumanPlayer();
+
             Platform.runLater(() -> setState(playerTurnState));
         }).start();
+        printCardsHumanPlayer();
     }
 
 

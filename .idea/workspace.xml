@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="New documentation included">
+    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="Cambios de agregados para comer automaticamente con +2 o +4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/machine/ThreadPlayMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/machine/ThreadPlayMachine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +114,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719022139558</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cambios de agregados para comer automaticamente con +2 o +4">
+      <option name="closed" value="true" />
+      <created>1719023905718</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719023905718</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +242,7 @@
     <MESSAGE value="bug del boton UNO arreglado" />
     <MESSAGE value="Se muestra una alerta cuando el jugador humano ya no tiene cartas. Se hicieron cambios respecto al boton de cerrar el juego, se implementaron metodos que simplifican su funcionamiento y que permite a la alerta llamarlos para que cierre el juego" />
     <MESSAGE value="New documentation included" />
-    <option name="LAST_COMMIT_MESSAGE" value="New documentation included" />
+    <MESSAGE value="Cambios de agregados para comer automaticamente con +2 o +4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios de agregados para comer automaticamente con +2 o +4" />
   </component>
 </project>
