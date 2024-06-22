@@ -68,12 +68,6 @@ public class GameUno implements IGameUno {
     @Override
     public void playCard(Card card) {
         this.table.addCardOnTheTable(card);
-        if (card.getValue().equals("+2")){
-            eatCard(this.machinePlayer, 2);
-        }
-        else if (card.getValue().equals("+4")){
-            eatCard(this.machinePlayer, 4);
-        }
     }
 
     /**
@@ -121,7 +115,16 @@ public class GameUno implements IGameUno {
         }
         return cards;
     }
-
+    @Override
+    public void checkForSpecialCard(Card card, Player player){
+        int numberOfCards = 0;
+        if(card.getValue().contains("+2")){
+            numberOfCards = 2;
+        } else if (card.getValue().contains("+4")){
+            numberOfCards = 4;
+        }
+        eatCard(player, numberOfCards);
+    }
 
     /**
      * Checks if the game is over.

@@ -11,6 +11,7 @@ public class ThreadPlayMachine extends Thread {
     private Player machinePlayer;
     private ImageView tableImageView;
     private volatile boolean hasPlayerPlayed;
+    private volatile Card lastPlayedCard;
     private volatile boolean running;
 
     public ThreadPlayMachine(Table table, Player machinePlayer, ImageView tableImageView) {
@@ -48,13 +49,16 @@ public class ThreadPlayMachine extends Thread {
             tableImageView.setImage(card.getImage());
             machinePlayer.getCardsPlayer().remove(card);
             System.out.println("Se añadió " + tableImageView.getImage());
+            setLastPlayedCard(card);
         } else {
             Card drawnCard = new Deck().takeCard();
             if (validCardToPlay(drawnCard)) {
                 table.addCardOnTheTable(drawnCard);
                 tableImageView.setImage(drawnCard.getImage());
+                setLastPlayedCard(drawnCard);
             } else {
                 machinePlayer.addCard(drawnCard);
+                setHasPlayerPlayed(false);
             }
         }
     }
@@ -80,5 +84,13 @@ public class ThreadPlayMachine extends Thread {
 
     public void setHasPlayerPlayed(boolean hasPlayerPlayed) {
         this.hasPlayerPlayed = hasPlayerPlayed;
+    }
+
+    public void setLastPlayedCard(Card lastPlayedCard) {this.lastPlayedCard = lastPlayedCard;}
+
+    public Card getLastPlayedCard() {return lastPlayedCard;}
+
+    public boolean isHasPlayerPlayed() {
+        return hasPlayerPlayed;
     }
 }

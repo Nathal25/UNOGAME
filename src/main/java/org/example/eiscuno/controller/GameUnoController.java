@@ -296,6 +296,8 @@ public class GameUnoController {
                 e.printStackTrace();
             }
             threadPlayMachine.putCardOnTheTable();
+            gameUno.checkForSpecialCard(threadPlayMachine.getLastPlayedCard(), humanPlayer);
+            //printCardsHumanPlayer();
             Platform.runLater(() -> setState(playerTurnState));
         }).start();
     }
@@ -345,6 +347,7 @@ public class GameUnoController {
      */
     private void handleFirstCardPlay(Card card) {
         gameUno.playCard(card);
+        gameUno.checkForSpecialCard(card, machinePlayer);
         tableImageView.setImage(card.getImage());
         humanPlayer.removeCard(findPosCardsHumanPlayer(card));
         printCardsHumanPlayer();
@@ -356,15 +359,18 @@ public class GameUnoController {
         System.out.println("Cartas de la máquina: " + machinePlayer.getCardsPlayer().size());
         System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
         printCardMachinePlayer();
+        startMachineTurn();
     }
 
     /**
      * Handles the moment when the human player plays a card that follows the rules of the game
+     * Handles the event in which the player turns over a playable card according to the rules of the game.
      *
-     * @param card la carta que el jugador quiere jugar
+     * @param card the card the player wants to play.
      */
     private void handlePlayableCard(Card card) {
         gameUno.playCard(card);
+        gameUno.checkForSpecialCard(card, machinePlayer);
         tableImageView.setImage(card.getImage());
         humanPlayer.removeCard(findPosCardsHumanPlayer(card));
         if (card.getValue().equals("+4") || card.getValue().equals("+2") || card.getValue().equals("SKIP")) {
@@ -373,6 +379,7 @@ public class GameUnoController {
             threadPlayMachine.setHasPlayerPlayed(true);
         }
         printCardsHumanPlayer();
+        printCardMachinePlayer();
         System.out.println("Cartas de la máquina: " + machinePlayer.getCardsPlayer().size());
         System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
         setState(machineTurnState); // Cambiar el turno aquí después de que se juegue la carta
@@ -380,20 +387,20 @@ public class GameUnoController {
     }
 
     /**
-     * Verifica si el jugador puede jugar en este momento.
+     * Verifies if it's the player's turn.
      *
-     * @return true si es el turno del jugador y puede jugar; false en caso contrario
+     * @return true if it's the player turn, false otherwise
      */
     private boolean canHumanPlay() {
         return currentState == playerTurnState;
     }
 
     /**
-     * Verifica si una carta es jugable según las reglas del juego.
+     * Verifies if a card is playable according to the game rules
      *
-     * @param cardToBePlayed la carta que el jugador quiere jugar
-     * @param cardOnTable    la carta actualmente en la mesa
-     * @return true si la carta es jugable; false en caso contrario
+     * @param cardToBePlayed the card wanted to be played
+     * @param cardOnTable the current card on the table
+     * @return true if the card is playable, false otherwise
      */
     private boolean isPlayable(Card cardToBePlayed, Card cardOnTable) {
         return (cardToBePlayed.getValue().equals(cardOnTable.getValue()) || cardToBePlayed.getColor().equals(cardOnTable.getColor()) || cardToBePlayed.getColor().equals("NON_COLOR") || cardOnTable.getColor().equals("NON_COLOR"));
