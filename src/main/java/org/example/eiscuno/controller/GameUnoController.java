@@ -381,7 +381,7 @@ public class GameUnoController {
         //printCardMachinePlayer();
         System.out.println("Cartas de la máquina: " + machinePlayer.getCardsPlayer().size());
         System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
-        setState(machineTurnState); // Cambiar el turno aquí después de que se juegue la carta
+        setState(machineTurnState);
         startMachineTurn();
     }
 
@@ -544,6 +544,7 @@ public class GameUnoController {
      */
     public void showWinner(){
         if(this.humanPlayer.getCardsPlayer().size()==0){
+            unoTimer.stop();
             String tittle="WINNER";
             String header ="";
             String content ="¡Has Ganado!";
