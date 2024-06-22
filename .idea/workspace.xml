@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="Se implementó el patron de diseño State, esto permite que cambie de estado dependiendo del jugador y, por ende, el jugador no pueda realizar acciones mientras esté jugando la maquina a excepción de presionar el boton UNO">
+    <list default="true" id="1ee8ff40-bbdd-4aec-a3d2-cf5cc45130ec" name="Changes" comment="Se actualiza automaticamente el mazo cuando debe comer 2 o 4 cartas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/controller/GameUnoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/machine/ThreadPlayMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/machine/ThreadPlayMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/machine/ThreadSingUNOMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/eiscuno/model/machine/ThreadSingUNOMachine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +59,13 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.HelloApplication.executor": "Run",
     "Application.Main.executor": "Run",
+    "JUnit.DeckTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "sysr",
+    "git-widget-placeholder": "nog",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/natis/IdeaProjects/eisc-uno-master/src/main/java/org/example/eiscuno/model",
     "list.type.of.created.stylesheet": "CSS",
@@ -93,13 +92,15 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.eiscuno.model.deck" />
+      <recent name="org.example.eiscuno.model.game" />
       <recent name="org.example.eiscuno.model.card" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.eiscuno.model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.DeckTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.eiscuno.Main" />
       <module name="eisc-uno" />
@@ -113,8 +114,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DeckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eisc-uno" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.eiscuno.model.deck.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.eiscuno.model.deck" />
+      <option name="MAIN_CLASS_NAME" value="org.example.eiscuno.model.deck.DeckTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DeckTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -160,6 +178,7 @@
       <workItem from="1718303003074" duration="638000" />
       <workItem from="1718908159224" duration="17303000" />
       <workItem from="1718982387031" duration="4412000" />
+      <workItem from="1719017383506" duration="5518000" />
     </task>
     <task id="LOCAL-00001" summary="Se implementan las cartas de la maquina en la parte superior">
       <option name="closed" value="true" />
@@ -185,7 +204,47 @@
       <option name="project" value="LOCAL" />
       <updated>1718923600371</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="bug del boton UNO arreglado">
+      <option name="closed" value="true" />
+      <created>1719018088094</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719018088094</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Se muestra una alerta cuando el jugador humano ya no tiene cartas. Se hicieron cambios respecto al boton de cerrar el juego, se implementaron metodos que simplifican su funcionamiento y que permite a la alerta llamarlos para que cierre el juego">
+      <option name="closed" value="true" />
+      <created>1719020830230</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719020830230</updated>
+    </task>
+    <task id="LOCAL-00006" summary="New documentation included">
+      <option name="closed" value="true" />
+      <created>1719022139558</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719022139558</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Cambios de agregados para comer automaticamente con +2 o +4">
+      <option name="closed" value="true" />
+      <created>1719023905718</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719023905718</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Se actualiza automaticamente el mazo cuando debe comer 2 o 4 cartas">
+      <option name="closed" value="true" />
+      <created>1719024269126</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719024269126</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +266,11 @@
     <MESSAGE value="Se implementan las cartas de la maquina en la parte superior" />
     <MESSAGE value="se cambió reserve por reverse" />
     <MESSAGE value="Se implementó el patron de diseño State, esto permite que cambie de estado dependiendo del jugador y, por ende, el jugador no pueda realizar acciones mientras esté jugando la maquina a excepción de presionar el boton UNO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se implementó el patron de diseño State, esto permite que cambie de estado dependiendo del jugador y, por ende, el jugador no pueda realizar acciones mientras esté jugando la maquina a excepción de presionar el boton UNO" />
+    <MESSAGE value="bug del boton UNO arreglado" />
+    <MESSAGE value="Se muestra una alerta cuando el jugador humano ya no tiene cartas. Se hicieron cambios respecto al boton de cerrar el juego, se implementaron metodos que simplifican su funcionamiento y que permite a la alerta llamarlos para que cierre el juego" />
+    <MESSAGE value="New documentation included" />
+    <MESSAGE value="Cambios de agregados para comer automaticamente con +2 o +4" />
+    <MESSAGE value="Se actualiza automaticamente el mazo cuando debe comer 2 o 4 cartas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se actualiza automaticamente el mazo cuando debe comer 2 o 4 cartas" />
   </component>
 </project>
