@@ -124,6 +124,7 @@ public class GameUnoController {
 
     /**
      * Represents the new set of cards of  the deck
+     *
      * @param deckOfCards
      */
     public void newCards(Stack<Card> deckOfCards) {
@@ -133,7 +134,7 @@ public class GameUnoController {
     }
 
     /**
-     * Adds to cards to the human player when this does not clicks the UNO button on time
+     * Adds to cards to the human player when this does not click the UNO button on time
      */
     private void addTwoCardsToHumanPlayer() {
         gameUno.eatCard(humanPlayer,2);
@@ -334,7 +335,6 @@ public class GameUnoController {
 
         }
 
-        // Inicia el temporizador si al jugador le quedan dos cartas
         if (humanPlayer.getCardsPlayer().size() == 1) {
             startUnoTimer();
         }
@@ -363,7 +363,6 @@ public class GameUnoController {
     }
 
     /**
-     * Handles the moment when the human player plays a card that follows the rules of the game
      * Handles the event in which the player turns over a playable card according to the rules of the game.
      *
      * @param card the card the player wants to play.
@@ -379,7 +378,7 @@ public class GameUnoController {
             threadPlayMachine.setHasPlayerPlayed(true);
         }
         printCardsHumanPlayer();
-        printCardMachinePlayer();
+        //printCardMachinePlayer();
         System.out.println("Cartas de la máquina: " + machinePlayer.getCardsPlayer().size());
         System.out.println("Cartas del jugador: " + humanPlayer.getCardsPlayer().size());
         setState(machineTurnState); // Cambiar el turno aquí después de que se juegue la carta

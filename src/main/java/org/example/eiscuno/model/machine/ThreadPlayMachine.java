@@ -90,7 +90,4 @@ public class ThreadPlayMachine extends Thread {
 
     public Card getLastPlayedCard() {return lastPlayedCard;}
 
-    public boolean isHasPlayerPlayed() {
-        return hasPlayerPlayed;
-    }
 }
